@@ -15,4 +15,7 @@ The project is to answer business questions like what kind of behaviors are flag
 - False Positive - A legitimate non-fraudulent account is classified as fraudulent
 - False Negative - A fraudulent account is classified as non-fraudulent
 
-
+### Review Comments
+- The use of the word legitimate in the metrics somewhat detracts from the readability, as it's implied that 'a non-fraudulent account' is the same as 'a legitimate non-fraudulent account'. Additionally fraudulent is misspelled in the True Positive case. Otherwise, the descriptions of each metric case are self consistent and appear correct.
+- There don't appear to be any cost/spending/revenue estimates for any of the metrics cases yet. I'm assuming that is just due to not writing those yet, but I'm writing it in this comment anyways just to be sure.
+- It may be a good idea to add a table with the confusion matrix, for the sake of presenting it in the same way that it was presented in class.
