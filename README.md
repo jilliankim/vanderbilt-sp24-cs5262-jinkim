@@ -22,13 +22,23 @@ The project is to answer business questions like what kind of behaviors are flag
 
 - True Positive - Observation is Positive, and the model classified as Positive
 - True Negative - Observation is Positive, but model classified as Negative
-- False Positive - Observation is Negative, and the model classified it as Positive
-- False Negative - Observation is Negative, but the model classified it as Positive
+- False Negative - Observation is Negative, and the model classified it as Negative
+- False Positive - Observation is Negative, but the model classified it as Positive
 
 ### Cost & Revenue
 
 Assuming most users are non-fraudulent, the benefit of the model working would mostly come from TP and the loss would come from FN. Possibly the model can introduce bad user experience if FP is higher, but better safe than sorry.
 For a population of 20 million customers, if 2% of the population is fraudulent, and had an average of $500 fraudulent transactions, and only 50% of those fraudulent transactions were caught (FN is high), that would already be $250 million loss. So it is imperative the model is tuned to lower FN rate, and this model can be on a bit conservative side, compensating bad user experience.
+
+
+- TP: Doesn't save much.
+- TN: Possibly bad user expenrience, but doesn't lose much.
+- FP: This is where model would save money
+20 million users, 1 transaction per user * 0.05 fraudulent transactions * $500 average * 50% of FP rate = $250M loss
+- FN: This is where the model would lose money
+20 million users, 1 transaction per user * 0.05 fraudulent transactions * $500 average * 50% of FN rate = $250M loss
+
+The best way is to increase FN, and reduce FP.
 
 #### References
 - https://www.jpmorgan.com/insights/payments/fraud-and-risk-management/payment-fraud-controls
