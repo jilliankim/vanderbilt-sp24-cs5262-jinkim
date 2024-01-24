@@ -16,7 +16,7 @@ The project is to answer business questions like what kind of behaviors are flag
 | Negative | FN | TN |
 
 - Row: True Class
-- Col: Predicted Clas
+- Col: Predicted Class
 
 #### Description
 
