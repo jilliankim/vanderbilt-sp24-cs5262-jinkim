@@ -15,8 +15,11 @@ The project is to answer business questions like what kind of behaviors are flag
 | Positive | TP | FP |
 | Negative | FN | TN |
 
-Row: True Class
-Col: Predicted Clas
+- Row: True Class
+- Col: Predicted Clas
+
+#### Description
+
 - True Positive - Observation is Positive, and the model classified as Positive
 - True Negative - Observation is Positive, but model classified as Negative
 - False Positive - Observation is Negative, and the model classified it as Positive
