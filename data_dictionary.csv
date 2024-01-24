@@ -4,7 +4,7 @@ income, Annual income of the applicant in qualities
 name_email_similarity, Metric of similarity between email and applicant’s name. Higher values represent higher similarity. 
 prev_address_months_count, Number of months in previous registered address of the applicant.
 current_address_months_count, Months in currently registered address of the applicant.
-customer_age, Applicant’s age in bins per decade (e.g, 20-29 is represented as 20).
+customer_age, Applicant’s age in bins per decade.
 days_since_request, Number of days passed since application was done. 
 intended_balcon_amount, Initial transferred amount for application.
 payment_type, Credit payment plan type. 5 possible (annonymized) values.
