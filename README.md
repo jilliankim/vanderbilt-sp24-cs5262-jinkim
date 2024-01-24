@@ -10,10 +10,26 @@ The project is to answer business questions like what kind of behaviors are flag
 
 ### Metrics
 
-- True Positive - A legitimate fradulent account is classified as fraudulent
-- True Negative - A non-fraudulent account is classified as non-fraudulent
-- False Positive - A legitimate non-fraudulent account is classified as fraudulent
-- False Negative - A fraudulent account is classified as non-fraudulent
+| | Positive | Negative |
+|:-:|:-:|:-:|
+| Positive | TP | FP |
+| Negative | FN | TN |
+
+Row: True Class
+Col: Predicted Clas
+- True Positive - Observation is Positive, and the model classified as Positive
+- True Negative - Observation is Positive, but model classified as Negative
+- False Positive - Observation is Negative, and the model classified it as Positive
+- False Negative - Observation is Negative, but the model classified it as Positive
+
+### Cost & Revenue
+
+Assuming most users are non-fraudulent, the benefit of the model working would mostly come from TP and the loss would come from FN. Possibly the model can introduce bad user experience if FP is higher, but better safe than sorry.
+For a population of 20 million customers, if 2% of the population is fraudulent, and had an average of $500 fraudulent transactions, and only 50% of those fraudulent transactions were caught (FN is high), that would already be $250 million loss. So it is imperative the model is tuned to lower FN rate, and this model can be on a bit conservative side, compensating bad user experience.
+
+#### References
+- https://www.jpmorgan.com/insights/payments/fraud-and-risk-management/payment-fraud-controls
+- https://www.goldmansachs.com/what-we-do/transaction-banking/insights/payments-fraud.pdf
 
 ### Review Comments
 - The use of the word legitimate in the metrics somewhat detracts from the readability, as it's implied that 'a non-fraudulent account' is the same as 'a legitimate non-fraudulent account'. Additionally fraudulent is misspelled in the True Positive case. Otherwise, the descriptions of each metric case are self consistent and appear correct.
